@@ -1,8 +1,4 @@
-from mamifero import Mamifero
-from ave import Ave
-from anfibio import Anfibio
-from pez import Pez
-from reptil import Reptil
+import zooAnimales
 
 class Animal:
     _totalAnimales = 0
@@ -13,25 +9,19 @@ class Animal:
         self._habitat = habitat
         self._genero = genero
         self._zona = None
+        Animal._totalAnimales += 1
 
     def movimiento(self):
         return "desplazarse"
     
     def totalPortipo(self):
-        return f"Mamiferos: {Mamifero.cantidadMamiferos()} \n 
-                Aves: {Ave.cantidadAves()} \n 
-                Reptiles: {Reptil.cantidadReptiles()} \n 
-                Peces: {Pez.cantidadPeces()} \n 
-                Anfibios: {Anfibio.cantidadAnfibios()}"
+        return f"Mamiferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()} \n Aves: {zooAnimales.ave.Ave.cantidadAves()} \n Reptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()} \n Peces: {zooAnimales.pez.Pez.cantidadPeces()} \n Anfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}"
 
-    def __str__(self):
+    def toString(self):
         if self._zona == None:
-             return f"Mi nombre es {self.getNombre}, tengo una edad de {self.getEdad}, 
-                habito en {self.getHabitat} y mi genero es {self.getGenero}, la zona en
-                la que me ubico es {self.getZona()}, en el {self.getZona().getZoo().getNombre()}"
+             return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}, la zona enla que me ubico es {self.getZona().getNombre()}, en el {self.getZona().getZoo().getNombre()}"
         else:
-            return f"Mi nombre es {self.getNombre}, tengo una edad de {self.getEdad}, 
-                    habito en {self.getHabitat} y mi genero es {self.getGenero}"
+            return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
 
     def getNombre(self):
         return self._nombre

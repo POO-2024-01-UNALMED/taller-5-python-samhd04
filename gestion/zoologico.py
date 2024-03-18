@@ -11,7 +11,7 @@ class Zoologico:
         contador = 0
 
         for zona in self._zonas:
-            contador += len(zona.getAnimales())
+            contador += zona.cantidadAnimales()
 
         return contador
 
