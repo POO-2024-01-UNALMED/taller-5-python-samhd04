@@ -17,10 +17,10 @@ class Pez(Animal):
     def setColorEscamas(self, colorEscamas):
         self._colorEscamas = colorEscamas
 
-    def getLargoPluma(self):
-        return self._largoPluma
+    def getCantidadAletas(self):
+        return self._cantidadAletas
     
-    def setLargoPluma(self, cantidadAletas):
+    def setCantidadAletas(self, cantidadAletas):
         self._cantidadAletas = cantidadAletas
 
     def movimiento(self):
