@@ -14,15 +14,15 @@ class Animal:
     def movimiento(self):
         return "desplazarse"
     
-    def totalPortipo(self):
-        return f"Mamiferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()} \n Aves: {zooAnimales.ave.Ave.cantidadAves()} \n Reptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()} \n Peces: {zooAnimales.pez.Pez.cantidadPeces()} \n Anfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}"
+    def totalPorTipo(self):
+        return f"Mamiferos : {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves : {zooAnimales.ave.Ave.cantidadAves()}\nReptiles : {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces : {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios : {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}"
 
     def toString(self):
         if self._zona == None:
-             return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}, la zona enla que me ubico es {self.getZona().getNombre()}, en el {self.getZona().getZoo().getNombre()}"
+             return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
         else:
-            return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
-
+            return f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}, la zona enla que me ubico es {self.getZona().getNombre()}, en el {self.getZona().getZoo().getNombre()}"
+        
     def getNombre(self):
         return self._nombre
     
