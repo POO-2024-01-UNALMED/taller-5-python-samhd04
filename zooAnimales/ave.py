@@ -1,14 +1,14 @@
 from animal import Animal
 
 class Ave(Animal):
-    listado = []
+    _listado = []
     halcones = 0
     aguilas = 0
 
     def __init__(self, nombre = None, edad = 0, habitat = None, genero = None, colorPlumas = None):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas = colorPlumas
-        Ave.listado.append(self)
+        Ave._listado.append(self)
 
     def getColorPlumas(self):
         return self._colorPlumas

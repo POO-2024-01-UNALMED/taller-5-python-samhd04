@@ -3,13 +3,11 @@ from ave import Ave
 from anfibio import Anfibio
 from pez import Pez
 from reptil import Reptil
-from gestion.zona import Zona
-from gestion.zona import Zoologico
 
 class Animal:
     _totalAnimales = 0
 
-    def __init__(self, nombre = None, edad = 0, habitat = None, genero = None):
+    def __init__(self, nombre, edad, habitat, genero):
         self._nombre = nombre
         self._edad = edad
         self._habitat = habitat

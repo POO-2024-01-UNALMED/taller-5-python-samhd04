@@ -1,15 +1,15 @@
 from animal import Animal
 
 class Anfibio(Animal):
-    listado = []
+    _listado = []
     ranas = 0
     salamandras = 0
 
-    def __init__(self, nombre = None, edad = 0, habitat = None, genero = None, colorPiel = None, venenoso = False):
+    def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
-        Anfibio.listado.append(self)
+        Anfibio._listado.append(self)
 
     def getColorPiel(self):
         return self._colorPiel

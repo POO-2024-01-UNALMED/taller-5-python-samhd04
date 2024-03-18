@@ -1,15 +1,15 @@
 from animal import Animal
 
 class Reptil(Animal):
-    listado = []
+    _listado = []
     iguanas = 0
     serpientes = 0
 
-    def __init__(self, nombre = None, edad = 0, habitat = None, genero = None, colorEscamas = None, largoCola = 0):
+    def __init__(self, nombre, edad, habitat, genero, colorEscamas, largoCola):
         super().__init__(nombre, edad, habitat, genero)
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
-        Reptil.listado.append(self)
+        Reptil._listado.append(self)
 
     def getColorEscamas(self):
         return self._colorEscamas
